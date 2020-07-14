@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessSpawn", "ProcessSpawn.csproj", "{47F281AC-94BA-470E-ACDA-45C1F6C3BDE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47F281AC-94BA-470E-ACDA-45C1F6C3BDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47F281AC-94BA-470E-ACDA-45C1F6C3BDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47F281AC-94BA-470E-ACDA-45C1F6C3BDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47F281AC-94BA-470E-ACDA-45C1F6C3BDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4BFD461-DF08-46CF-B1D1-504D2FE46533}
+	EndGlobalSection
+EndGlobal
