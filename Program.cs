@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 
 namespace ProcessSpawn
 {
@@ -7,7 +8,12 @@ namespace ProcessSpawn
     {
         static void Main(string[] args)
         {
+            AsyncRead();
+            SyncRead();
+        }
 
+        private static void AsyncRead()
+        {
             Process process = new Process();
             ProcessStartInfo startInfo = new ProcessStartInfo();
 
@@ -24,8 +30,35 @@ namespace ProcessSpawn
             process.BeginOutputReadLine();
 
             process.WaitForExit();
-            Console.WriteLine("Done");
+            Console.WriteLine("AsyncRead Done");
         }
 
+        private static void SyncRead()
+        {
+            Process process = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+
+            startInfo.RedirectStandardInput = false;
+            startInfo.RedirectStandardOutput = true;
+            startInfo.UseShellExecute = false;
+            startInfo.FileName = @"cmd.exe";
+            startInfo.Arguments = @"/C type C:\Temp\test.txt";
+
+            process.StartInfo = startInfo;
+
+            process.Start();
+
+            StreamReader reader = process.StandardOutput;
+            string output;
+
+            while (reader.Peek() >= 0)
+            {
+                output = reader.ReadLine();
+                Console.WriteLine("received output: {0}", output);
+            }
+
+            process.WaitForExit();
+            Console.WriteLine("SyncRead Done");
+        }
     }
 }
