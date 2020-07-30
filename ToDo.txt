@@ -1,0 +1,28 @@
+﻿.LOG
+
+TODO
+
+Decrypt
+after gpg
+write to sql table 
+	SQLBulkCopy with IDataReader - StandardOutput, 
+	then wrapper class to prepend filename, guid and status and rowcount
+write to file
+
+Encrypt
+before gpg
+read from sql table
+read from file
+
+configuration in db
+folder/file to monitor
+public key to use for encrypt
+passphrase to use for decrypt
+
+encrypt
+source table
+source file
+
+decrypt
+destination table
+destination file
